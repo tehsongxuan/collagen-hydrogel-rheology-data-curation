@@ -1,0 +1,7 @@
+﻿original_filename,worksheet,unit_cell,variable,observed_unit,standardized_unit,expected_unit,unicode_mapping,mapping_found,mapping_success,processing_decision,source_workbook_modified
+Colageno_bov_1.5_1_frecuencia.xlsx,Hoja1,E5,Temperature,[ｰC],[°C],[°C],U+FF70 -> U+00B0,True,True,Standardise the unit label in the processed dataset only,False
+Colageno_bov_1.5_1_tiempo.xlsx,Hoja1,F5,Complex Viscosity,[Paｷs],[Pa·s],[Pa·s],U+FF77 -> U+00B7,True,True,Standardise the unit label in the processed dataset only,False
+Colageno_bov_1.5_1_tiempo.xlsx,Hoja1,H5,Temperature,[ｰC],[°C],[°C],U+FF70 -> U+00B0,True,True,Standardise the unit label in the processed dataset only,False
+Colageno_bov_2.3_2_frecuencia.xlsx,Hoja1,E5,Temperature,[ｰC],[°C],[°C],U+FF70 -> U+00B0,True,True,Standardise the unit label in the processed dataset only,False
+Colageno_bov_2.3_2_tiempo.xlsx,Hoja1,F5,Complex Viscosity,[Paｷs],[Pa·s],[Pa·s],U+FF77 -> U+00B7,True,True,Standardise the unit label in the processed dataset only,False
+Colageno_bov_2.3_2_tiempo.xlsx,Hoja1,H5,Temperature,[ｰC],[°C],[°C],U+FF70 -> U+00B0,True,True,Standardise the unit label in the processed dataset only,False
