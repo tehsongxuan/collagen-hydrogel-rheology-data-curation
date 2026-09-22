@@ -1,0 +1,17 @@
+name: hydrogel-rheology
+
+channels:
+  - defaults
+
+dependencies:
+  - python=3.11
+  - numpy=1.26
+  - pandas=2.2
+  - openpyxl
+  - matplotlib
+  - seaborn
+  - scipy
+  - notebook
+  - jupyterlab
+  - ipykernel
+  - pytest
