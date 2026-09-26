@@ -53,7 +53,7 @@ flowchart TD
 The current repository therefore documents the completed **source-data audit**
 and **schema-design** stages.
 
-Measurement extraction has not yet been performed. The measurement-level
+Measurement extraction has not yet been performed. Measurement-level
 quality-control relationships and the proposed measurement validation rules
 will be implemented during subsequent processing.
 
@@ -152,7 +152,7 @@ The workflow:
 - compares source workbooks against working expected structures;
 - investigates unexpected columns and unusual numerical observations directly
   against the original workbooks;
-- examines inconsistent unit labels at Unicode-character level;
+- examines inconsistent unit labels at character level;
 - validates explicit unit-label mappings; and
 - exports machine-readable provenance and quality-control records.
 
@@ -178,7 +178,7 @@ defines the intended structure of processed records.
 |---|---|---|
 | Unexpected column | `Colageno_bov_0.8_2_frecuencia.xlsx`, `Hoja1`, column `F`; `F6:F15` are empty and `F16:F26` contain formulas following `=D[row]+1` | Preserve the source workbook, but exclude undocumented column `F` from the future standardised frequency-sweep dataset |
 | Zero storage modulus | `Colageno_bov_0.8_1_frecuencia.xlsx`, `Hoja1`, cell `C6`; \(G' = 0\) Pa at 0.628 rad/s, with \(G'' = 1.590\) Pa at 37 °C | Retain the numeric zero, attach a quality-control flag during processing and treat derived \(\tan\delta\) as undefined where division by zero would occur |
-| Non-standard unit labels | Temperature labels contain `U+FF70` instead of degree symbol `U+00B0`; complex-viscosity labels contain `U+FF77` instead of middle dot `U+00B7` | Preserve the observed labels for provenance and apply validated canonical labels only during controlled processing |
+| Six occurrences of non-standard unit labels | Temperature source labels contain `ｰC` instead of `°C`; complex-viscosity source labels contain `Paｷs` instead of `Pa·s` | Preserve the observed source labels for provenance and apply validated canonical labels only during controlled processing |
 
 ### Validated unit-label mappings
 
@@ -186,6 +186,10 @@ defines the intended structure of processed records.
 |---|---|---|
 | Temperature | `[ｰC]` | `[°C]` |
 | Complex viscosity | `[Paｷs]` | `[Pa·s]` |
+
+The original source labels are preserved exactly as observed. Standardised
+labels are applied only during controlled processing and do not alter the
+original workbooks.
 
 ### Audit outputs
 
@@ -779,7 +783,7 @@ scientific workflow-engineering capabilities, including:
 - systematic Excel-workbook inspection;
 - source-file inventory construction;
 - schema discovery and structural validation;
-- Unicode-level diagnosis of inconsistent unit labels;
+- character-level diagnosis of inconsistent unit labels;
 - explicit unit-mapping validation;
 - quality-control issue documentation;
 - preservation of immutable source records;
