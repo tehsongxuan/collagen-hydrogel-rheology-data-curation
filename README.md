@@ -1,7 +1,7 @@
 ## Rendered project reports
 
 - [01 — Data Audit Report](https://tehsongxuan.github.io/collagen-hydrogel-rheology-data-curation/01_data_audit_report.html)
-- [02 — Schema Design Report](https://tehsongxuan.github.io/collagen-hydrogel-rheology-data-curation/02_schema_design_report.html)
+- [02 — Schema Design Report](https://tehsongxuan.github.io/collagen-hydrogel-rheology-data-curation/02_schema_design.html)
 
 # Collagen Hydrogel Rheology Data Curation and Analysis
 
