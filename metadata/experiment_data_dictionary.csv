@@ -1,0 +1,8 @@
+﻿field_name,proposed_data_type,required,unit,definition
+experiment_id,text,True,Not applicable,Identifier formed as dataset_id::original_filename::sheet_name.
+dataset_id,text,True,Not applicable,Project-assigned dataset label recorded during the source audit.
+original_filename,text,True,Not applicable,"Original source workbook filename, including its extension."
+sheet_name,text,True,Not applicable,Audited worksheet name within the source workbook.
+collagen_concentration_mg_ml,number,True,mg/mL,Collagen concentration parsed from the source filename during the audit.
+replicate_id,text,True,Not applicable,Source replicate label; shared physical identity across tests is unconfirmed.
+test_type_standard,text,True,Not applicable,Standardised test label: frequency_sweep or time_sweep.

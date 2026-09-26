@@ -1,0 +1,12 @@
+﻿field_name,proposed_data_type,standardised_unit,expected_in_test_types,missing_value_policy,definition
+measurement_id,text,Not applicable,frequency_sweep | time_sweep,Required for record identification or traceability; resolve before ingestion.,Identifier formed as experiment_id::row_<source_excel_row>.
+experiment_id,text,Not applicable,frequency_sweep | time_sweep,Required for record identification or traceability; resolve before ingestion.,Link to the experiment containing this observation.
+source_excel_row,integer,Not applicable,frequency_sweep | time_sweep,Required for record identification or traceability; resolve before ingestion.,"Original Excel row number, counted from 1."
+measurement_point,integer,Not applicable,frequency_sweep | time_sweep,Expected source value; flag missing values for review without filling.,Source-reported Meas. Pts. value; not elapsed time.
+angular_frequency_rad_s,number,rad/s,frequency_sweep | time_sweep,Expected source value; flag missing values for review without filling.,Angular frequency of the applied oscillation.
+storage_modulus_pa,number,Pa,frequency_sweep | time_sweep,Expected source value; flag missing values for review without filling.,G′: elastic component of the oscillatory shear response.
+loss_modulus_pa,number,Pa,frequency_sweep | time_sweep,Expected source value; flag missing values for review without filling.,G″: dissipative component of the oscillatory shear response.
+temperature_c,number,°C,frequency_sweep | time_sweep,Expected source value; flag missing values for review without filling.,Temperature recorded for the measurement point.
+shear_stress_pa,number,Pa,time_sweep,Frequency sweep: structurally absent. Time sweep: flag missing values for review. Do not fill with zero.,Shear stress reported for the measurement point.
+strain_percent,number,%,time_sweep,Frequency sweep: structurally absent. Time sweep: flag missing values for review. Do not fill with zero.,Reported strain expressed as a percentage.
+complex_viscosity_pa_s,number,Pa·s,time_sweep,Frequency sweep: structurally absent. Time sweep: flag missing values for review. Do not fill with zero.,Source-reported complex viscosity for the oscillatory test.
