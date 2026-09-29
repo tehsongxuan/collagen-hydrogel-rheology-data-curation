@@ -2,11 +2,11 @@
 
 [![Dataset DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17413651.svg)](https://doi.org/10.5281/zenodo.17413651)
 
-A reproducible Python workflow for auditing, structuring, validating and exploring rheology data reported in bovine-collagen hydrogel workbooks. The project makes source provenance and quality-control decisions explicit, and keeps conclusions within the limits of the available experimental records.
+A reproducible Python workflow for auditing, structuring, validating and exploring rheology data reported in bovine-collagen hydrogel workbooks. The project applies materials-informatics practices to experimental data: it makes provenance, schemas, quality-control decisions and analysis reproducible while keeping conclusions within the limits of the source records.
 
 ## Project status
 
-Stages 01–04 are complete. Stage 04 was run from a fresh Jupyter kernel, and the executed notebook was reviewed as an HTML report.
+Stages 01–04 are complete. Stage 04 passed `Kernel → Restart & Run All`; its executed notebook was reviewed in the rendered report.
 
 | Stage | Notebook | Status | Purpose |
 |---|---|---|---|
@@ -26,10 +26,12 @@ Stages 01–04 are complete. Stage 04 was run from a fresh Jupyter kernel, and t
 
 ### Rendered reports
 
-- [Stage 01 — Data audit report](docs/01_data_audit_report.html)
-- [Stage 02 — Schema design report](docs/02_schema_design.html)
-- [Stage 03 — Measurement extraction and validation report](docs/03_measurement_extraction_validation.html)
-- [Stage 04 — Exploratory rheology analysis report](docs/04_exploratory_rheology_analysis.html)
+These links open the rendered HTML reports directly on GitHub Pages:
+
+- [Stage 01 — Data Audit Report](https://tehsongxuan.github.io/collagen-hydrogel-rheology-data-curation/01_data_audit_report.html)
+- [Stage 02 — Schema Design Report](https://tehsongxuan.github.io/collagen-hydrogel-rheology-data-curation/02_schema_design.html)
+- [Stage 03 — Measurement Extraction and Validation Report](https://tehsongxuan.github.io/collagen-hydrogel-rheology-data-curation/03_measurement_extraction_validation.html)
+- [Stage 04 — Exploratory Rheology Analysis Report](https://tehsongxuan.github.io/collagen-hydrogel-rheology-data-curation/04_exploratory_rheology_analysis.html)
 
 ### Metadata and quality-control records
 
@@ -58,6 +60,19 @@ The project concerns bovine-collagen hydrogels at reported concentrations of 0.8
 | **Total** | **20** | **660** | — |
 
 The associated research studies hydrogel properties and biological interactions using several techniques. This repository focuses on the rheology workbooks and the reproducibility of their curation and analysis; it does not reproduce the microscopy or cell-traction analyses.
+
+## Polymer and biomaterials informatics relevance
+
+This project is a **materials-data and workflow-engineering project for a collagen biomaterial**. It focuses on making experimental rheology data usable and traceable before attempting cross-study synthesis or modelling. Collagen is a biological polymer, and the measured hydrogel response is shaped by material composition and experimental conditions; the workbook values therefore need their experimental context and provenance alongside them.
+
+The four stages create that foundation:
+
+1. **Audit the source records.** Identify how the Excel files encode measurements, units, formulas and unusual values before transforming them.
+2. **Represent the experiment explicitly.** Separate the experiment register, repeated measurement points and QC findings, with defined fields and missing-value rules.
+3. **Create validated machine-readable measurements.** Keep each processed value traceable to its source workbook and Excel row, and validate identifiers, units, expected row counts and structural missingness.
+4. **Explore material response at the correct experimental level.** Compare storage modulus (`G′`), loss modulus (`G″`) and derived loss factor across angular frequency; examine time-sweep measurements in source order; and show experiment-to-experiment variation without treating repeated points as independent samples.
+
+This is **not a polymer-property prediction or machine-learning study**. It does not use polymer structures, molecular descriptors or a predictive model. Its contribution is a reproducible data pipeline and a scientifically cautious first analysis of a biomaterial's rheology. A well-documented schema could support future integration with formulation, processing, imaging or biological-response data if those measurements and linkages are available. This project does not invent those links or claim that they are already present.
 
 ## Workflow and results
 
@@ -172,6 +187,4 @@ Please cite the source dataset and associated article using their records:
 - Related article: [DOI 10.1016/j.actbio.2024.07.002](https://doi.org/10.1016/j.actbio.2024.07.002)
 
 The experimental measurements remain attributable to their original creators. Consult the Zenodo record and publication for source provenance and reuse conditions.
-
-
 
