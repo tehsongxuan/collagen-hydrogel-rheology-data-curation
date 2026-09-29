@@ -6,8 +6,7 @@ A reproducible Python workflow for auditing, structuring, validating and explori
 
 ## Project status
 
-Stages 01–04 are complete. Stage 04 passed `Kernel → Restart & Run All`; its executed notebook was reviewed in the rendered report.
-
+Stages 01–04 are complete. 
 | Stage | Notebook | Status | Purpose |
 |---|---|---|---|
 | 01 — Source-data audit | [`01_data_audit.ipynb`](notebooks/01_data_audit.ipynb) | Complete | Audit workbook provenance, layout, unit labels and quality-control findings. |
